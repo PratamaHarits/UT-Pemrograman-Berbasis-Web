@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>v-for Vue.js</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Daftar Buah</h2>
+
+      <ul>
+        <li v-for="buah in daftarBuah">{{ buah }}</li>
+      </ul>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        data() {
+          return {
+            daftarBuah: ["Apel", "Mangga", "Jeruk", "Anggur"],
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

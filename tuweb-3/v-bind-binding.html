@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Contoh v-bind</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Contoh v-bind Gambar</h2>
+      <img v-bind:src="gambar1" width="200" />
+      <img :src="gambar2" width="200" />
+      <h2>Contoh v-bind Link</h2>
+      <!-- <a v-bind:href="link"> Kunjungi Website </a> -->
+      <a :href="link"> Kunjungi Website </a>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        data() {
+          return {
+            gambar1: "gambar/001.png",
+            gambar2: "gambar/002.png",
+            link: "https://vuejs.org",
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

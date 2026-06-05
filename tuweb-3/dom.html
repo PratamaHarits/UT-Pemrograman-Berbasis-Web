@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Belajar DOM</title>
+  </head>
+  <body>
+    <h1 id="judul">Hello</h1>
+
+    <button onclick="ubahTampilan()">Klik</button>
+
+    <script>
+      function ubahTampilan() {
+        document.getElementById("judul").innerHTML = "Hello JavaScript";
+        document.getElementById("judul").style.color = "green";
+      }
+    </script>
+  </body>
+</html>

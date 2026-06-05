@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Input Dinamis</title>
+  </head>
+  <body>
+    <input type="text" id="nama" placeholder="Ketik di sini" />
+
+    <script>
+      const input = document.getElementById("nama");
+      input.addEventListener("input", function () {
+        if (this.value.trim() === "") {
+          this.style.backgroundColor = "white";
+        } else {
+          this.style.backgroundColor = "lightblue";
+        }
+      });
+    </script>
+  </body>
+</html>

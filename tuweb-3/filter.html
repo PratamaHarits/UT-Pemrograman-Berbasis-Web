@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Filter String Vue.js</title>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Filter Huruf Besar</h2>
+      <input type="text" v-model="nama" />
+      <p>Asli: {{ nama }}</p>
+      <p>Uppercase: {{ hurufBesar(nama) }}</p>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        data() {
+          return {
+            nama: "",
+          };
+        },
+        methods: {
+          hurufBesar(teks) {
+            return teks.toUpperCase();
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

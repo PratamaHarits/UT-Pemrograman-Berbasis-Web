@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Watcher Password</title>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Validasi Password</h2>
+      <input type="password" v-model="password" />
+      <p>Password: {{ password }}</p>
+      <p>{{ pesan }}</p>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        data() {
+          return {
+            password: "",
+            pesan: "",
+          };
+        },
+        watch: {
+          password(passwordBaru) {
+            if (passwordBaru.length < 8) {
+              this.pesan = "Password harus minimal 8 karakter";
+            } else {
+              this.pesan = "Password valid";
+            }
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>One-Way Data Binding</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>{{ nama }}</h2>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        data() {
+          return {
+            nama: "Muhammad Harits",
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

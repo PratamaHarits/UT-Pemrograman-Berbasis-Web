@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Computed Property</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="nama" />
+      <p>Nama Asli: {{ nama }}</p>
+      <p>Huruf Besar: {{ namaBesar }}</p>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        data() {
+          return {
+            nama: "",
+          };
+        },
+        computed: {
+          namaBesar() {
+            return this.nama.toUpperCase();
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

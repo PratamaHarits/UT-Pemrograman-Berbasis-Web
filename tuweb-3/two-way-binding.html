@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Two-Way Data Binding</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="nama" />
+      <p>Nama Anda: {{ nama }}</p>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        data() {
+          return {
+            nama: "",
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

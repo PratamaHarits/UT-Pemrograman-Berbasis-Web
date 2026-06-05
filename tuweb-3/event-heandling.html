@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Mouse Event Vue.js</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="tampilkanPesan">Klik Saya</button>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        methods: {
+          tampilkanPesan() {
+            alert("Tombol berhasil diklik");
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Methods Property</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Hitung Luas Persegi</h2>
+      <input type="number" v-model="sisi" />
+      <button @click="hitungLuas">Hitung</button>
+      <p>Luas: {{ luas }}</p>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        data() {
+          return {
+            sisi: 0,
+            luas: 0,
+          };
+        },
+        methods: {
+          hitungLuas() {
+            this.luas = this.sisi * this.sisi;
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
