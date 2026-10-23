@@ -4,15 +4,23 @@
     <title>Belajar DOM</title>
   </head>
   <body>
-    <h1 id="judul">Hello</h1>
-
-    <button onclick="ubahTampilan()">Klik</button>
+    <h2 id="nama"></h2>
+    <button onclick="ubahTampilan()">Tampilkan Nama</button>
 
     <script>
+      function ubahTampilan() {
+        document.getElementById("nama").innerHTML = "Muhammad Harits Pratama";
+        document.getElementById("nama").style.color = "blue";
+      }
+    </script>
+
+    <!-- <button onclick="ubahTampilan()">Klik</button> -->
+
+    <!-- <script>
       function ubahTampilan() {
         document.getElementById("judul").innerHTML = "Hello JavaScript";
         document.getElementById("judul").style.color = "green";
       }
-    </script>
+    </script> -->
   </body>
 </html>

@@ -1,27 +1,12 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>Conditional Vue</title>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
   </head>
   <body>
-    <div id="app">
-      <h2 v-if="nilai >= 85">Nilai A</h2>
-      <h2 v-else-if="nilai >= 70">Nilai B</h2>
-      <h2 v-else-if="nilai >= 60">Nilai C</h2>
-      <h2 v-else>Nilai D</h2>
-    </div>
-
-    <script>
-      const app = Vue.createApp({
-        data() {
-          return {
-            nilai: 40,
-          };
-        },
-      });
-
-      app.mount("#app");
-    </script>
+    <p>Password: <input type="text" name="" id="" /></p>
+    <p>Password minimal 8 huruf</p>
   </body>
 </html>

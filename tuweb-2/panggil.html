@@ -6,5 +6,23 @@
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div id="app">
+      <h1 v-if="nilai >= 80">NILAI A</h1>
+      <h1 v-else-if="nilai >= 70">NILAI B</h1>
+      <h1 v-else-if="nilai >= 60">NILAI C</h1>
+      <h1 v-else>NILAI D</h1>
+    </div>
+
+    <script>
+      const app = Vue.crateApp({
+        data() {
+          return {
+            nilai: 65,
+          };
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
 </html>

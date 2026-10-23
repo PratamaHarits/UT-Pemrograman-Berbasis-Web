@@ -1,5 +1,7 @@
-h1 {
-  background-color: aquamarine;
-  color: blue;
-  text-decoration-line: line-through;
+.berita1 {
+  background-color: lightblue;
+}
+
+.berita2 {
+  background-color: lightsalmon;
 }
